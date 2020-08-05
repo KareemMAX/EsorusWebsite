@@ -1,0 +1,54 @@
+body{
+    background-color: #F4F4F4;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-navbar{
+    background-color: #E3C408;
+}
+
+.navbar-title{
+    font-weight: 1000;
+}
+
+.action-btn{
+    margin-left: 20pt;
+    margin-right: 5pt;
+}
+
+.main-form{
+    padding: 50pt;
+}
+
+h1{
+    font-weight: 1000;
+    font-size: 3.5rem;
+}
+
+select{
+    margin: 10pt;
+}
+
+.form-checkbox{
+    margin: 10pt;
+}
+
+.upload-area{
+    background-image: url(/svg/photoupload_bg.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+    top: -25pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-weight: 1000;
+    font-size: 1.5rem;
+    overflow: hidden
+}
+
+.upload-icon{
+    object-fit: contain;
+}
