@@ -13,26 +13,127 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-navbar">
-        <a class="navbar-brand" href="#">
-            <img src="/photos/esorus-black-logo@2x.png" height="15" class="d-inline-block align-baseline" alt=""
-                loading="lazy">
-        </a>
-        <span class="navbar-title">Interior Designer</span>
-        <div>
-            <a class="action-btn" href="#">
-                <img src="/photos/user@2x.png" height="30" class="d-inline-block align-baseline" alt=""
-                    loading="lazy">
-            </a>
-            <a class="action-btn" href="#">
-                <img src="/photos/logout.png" height="30" class="d-inline-block align-baseline" alt=""
-                    loading="lazy">
-            </a>
+    <div class="flex-display">
+        <div class="container-fluid results-title">
+            <div class="row">
+                <div class="col-sm align-self-baseline">
+                    <img src="/photos/esorus-black-logo@2x.png" height="15" />
+                </div>
+
+                <div class="col-10">
+                    <span id="meet">Meet your</span>
+                    <p id="personal-designer-text">personal Interior Design assistant</p>
+                </div>
+            </div>
         </div>
-    </nav>
 
-    
+        <div class="results container-fluid">
+            <div class="row justify-content-around">
+                <div class="col-sm-4 d-flex align-items-center">
+                    <div class="product-details">
+                        <img class="uploaded-image" src="/photos/Image- Find item.png">
 
+                        <form class="container align-items-stretch">
+                            <div class="col-sm input-cols">
+                                <select class="input-fields">
+                                    <option selected>Style</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-sm input-cols">
+                                <select class="input-fields">
+                                    <option selected>Material Type</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-sm input-cols">
+                                <select class="input-fields">
+                                    <option selected>Color</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-sm input-cols">
+                                <select class="input-fields">
+                                    <option selected>Availability</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm input-cols">
+                                <label for="price">Price</label>
+                                <input type="number" class="form-control" id="price" placeholder="2500">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <ul class="list">
+                        <li class="result-details container">
+                            <img class="result-image" src="/photos/Recommendation-1@2x.png">
+                            <div class="container product-description">
+                                <span class="product-name">BENNY</span><br>
+                                <span class="product-category">armchair</span><br>
+                                <span class="product-dimensions"><span class="dimensions">Dimensions:</span> 860 x 870 x
+                                    990 ( W x D x H ) mm</span><br>
+                                <span class="product-price">EGP 1230</span><br>
+                                <span class="product-supplier">DECI</span><br>
+                            </div>
+                            <div class="col-4">
+                                <div class="container results-actions">
+                                    <a href="#" class="source1 btn margin">Source Now</a>
+                                    <a href="#" class="more2 btn margin">More Details</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="result-details container">
+                            <img class="result-image" src="/photos/Recommendation-2@2x.png">
+                            <div class="container product-description">
+                                <span class="product-name">ELMA</span><br>
+                                <span class="product-category">armchair</span><br>
+                                <span class="product-dimensions"><span class="dimensions">Dimensions:</span> 860 x 870 x
+                                    990 ( W x D x H ) mm</span><br>
+                                <span class="product-price">EGP 3250</span><br>
+                                <span class="product-supplier">PAPPALOR0</span><br>
+                            </div>
+                            <div class="col-4">
+                                <div class="container results-actions">
+                                    <a href="#" class="source1 btn margin">Source Now</a>
+                                    <a href="#" class="more2 btn margin">More Details</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="result-details container">
+                            <img class="result-image" src="/photos/Recommendation-3@2x.png">
+                            <div class="container product-description">
+                                <span class="product-name">TAJ</span><br>
+                                <span class="product-category">armchair</span><br>
+                                <span class="product-dimensions"><span class="dimensions">Dimensions:</span> 860 x 870 x
+                                    990 ( W x D x H ) mm</span><br>
+                                <span class="product-price">EGP 2500</span><br>
+                                <span class="product-supplier">MAHALLY</span><br>
+                            </div>
+                            <div class="col-4">
+                                <div class="container results-actions">
+                                    <a href="#" class="source1 btn margin">Source Now</a>
+                                    <a href="#" class="more2 btn margin">More Details</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

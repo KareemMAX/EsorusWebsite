@@ -1,7 +1,16 @@
+html{
+    height: 100%;
+    margin: 0;
+}
+
 body{
-    padding: 50px;
-    background-color: #F4F4F4;
+    background-color: #ffffff;
     font-family: 'Poppins', sans-serif;
+    height: 100%;
+}
+
+.recommendation-form{
+    padding: 50px;
 }
 
 .margin{
@@ -134,4 +143,129 @@ body{
 .upload-text{
     color: #FFCD24;
     font-weight: 600;
+}
+
+#meet{
+    color: #FFCD24;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+#personal-designer-text{
+    color: #33393D;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.results-title{
+    padding-top: 25px;
+    padding-bottom: 40px;
+    padding-left: 35px;
+}
+
+.flex-display{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.results{
+    flex: 1 1 auto;
+    background-color: #EAE9E9;
+    display: flex;
+    padding-right: 50px;
+}
+
+.list{
+    padding: 0px;
+}
+
+.product-details{
+    background-color: #ffffff;
+    border-radius: 25px;
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 35px;
+    margin: 15px;
+}
+
+.result-details{
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 150px;
+    flex: auto;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 15px;
+}
+
+.result-image{
+    border-radius: 5px;
+    height: 90%;
+    margin: 10px;
+    align-self: center;
+}
+
+.product-name{
+    color: #33393D;
+    font-weight: 600;
+}
+
+.product-category{
+    color: #33393D;
+}
+
+.product-dimensions{
+    color: #33393D;
+}
+
+.dimensions{
+    color: #33393D;
+    font-weight: 600;
+}
+
+.product-price{
+    color: #FFCD24;
+    font-weight: 600;
+}
+
+.product-supplier{
+    color: #666B6E;
+    font-weight: 600;
+}
+
+.product-description{
+    border-right: 1px solid #707070;
+}
+
+.results-actions{
+    justify-content: center!important;
+    display: flex;
+    flex-direction: column;
+}
+
+.uploaded-image{
+    border-radius: 45px;
+    border:6px solid #666B6E;
+    width: 90%;
+    margin: 10px;
+    align-self: center;
+}
+
+.input-cols{
+    flex-grow: 10;
+    margin-top: 10pt;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.input-fields{
+    width: 100%;
 }
