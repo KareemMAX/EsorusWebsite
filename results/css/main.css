@@ -173,7 +173,6 @@ body{
     flex: 1 1 auto;
     background-color: #EAE9E9;
     display: flex;
-    padding-right: 50px;
 }
 
 .list{
@@ -199,11 +198,8 @@ body{
     height: 150px;
     flex: auto;
     display: flex;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin: 15px;
+    padding: 15px;
+    margin-top: 15px;
 }
 
 .result-image{

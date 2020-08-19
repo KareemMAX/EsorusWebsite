@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Designer Chat | Esorus</title>
+    <link rel="shortcut icon" type="image/png" href="https://esorus.com/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://esorus.com/css/bootstrap.custom.css?v=1.0.12">
+    <link rel="stylesheet" href="https://esorus.com/css/style.css?v=1.1.21">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.custom.css">
+</head>
+
+<body>
+    <!-- 
+        side-menu-wrapper still visible after resize bug fix 
+    -->
+    <header class="scrolled" style="z-index : 101;">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="side-menu-btn">
+                    <button class="nav-icon">
+                        <!-- Menu sandwich -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <a class="navbar-brand" href="/">
+                    <img src="https://esorus.com/images/logo-black.png?v=1.0.1" alt="logo" class="logo-black">
+                </a>
+                <a class="navbar-toggler" href="/login">
+                    <img src="https://esorus.com/images/user-icon-orange.svg" alt="Login">
+                </a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item "><a class="nav-link" href="/interior-designers">Designers</a></li>
+                        <li class="nav-item "><a class="nav-link" href="/suppliers">Suppliers</a></li>
+                        <li class="nav-item "><a class="nav-link" href="/blog">Blog</a></li>
+                        <li class="nav-item "><a class="nav-link" href="/design-talk">Design Talk</a></li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#" data-toggle="dropdown">
+                                <i class="header-categories-icon"></i>
+                                Products
+                                <i class="arrow-down"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/category/lighting">Lighting</a>
+                                <a class="dropdown-item" href="/category/furniture">Furniture</a>
+                                <a class="dropdown-item" href="/category/office-furniture">Office Furniture</a>
+                                <a class="dropdown-item" href="/category/outdoor-furniture">Outdoor Furniture</a>
+                                <a class="dropdown-item" href="/category/appliences">Appliances</a>
+                                <a class="dropdown-item" href="/category/finishes">Finishes</a>
+                                <a class="dropdown-item" href="/category/decor">Decor</a>
+                                <a class="dropdown-item" href="/category/bathroom">Bathroom</a>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#" data-toggle="dropdown">
+                                <i class="header-signin-icon"></i>
+                                Sign In
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-login dropdown-menu-right">
+                                <p>Welcome Back !</p>
+                                <form action="/login_check" method="post" id="header-login-form"
+                                    novalidate="novalidate">
+                                    <div class="form-group">
+                                        <label class="form-label required">Email</label>
+                                        <input type="email" class="form-control" name="_username" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label required">Password</label>
+                                        <input type="password" class="form-control" name="_password" required="">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 text-left">
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" name="_remember_me" class="styled"
+                                                    checked="checked">
+                                                <span class="checkmark"></span>
+                                                Remember me
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6 text-right">
+                                            <a href="/resetting/request" class="forgot-password">Forgot Password?</a>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-sm-6">
+                                            <a href="/sign-up" class="btn btn-block btn-style-3">Sign Up</a>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <button class="btn btn-block btn-style-2" type="submit">Log In</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="side-bar">
+        <div class="side-bar-mobile-overlay"></div>
+        <div class="side-bar-wrapper">
+            <div class="side-bar-container">
+                <div class="side-bar-title">Welcome</div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            Home
+                            <i class="arrow"></i>
+                        </a>
+                        <ul>
+                            <li><a href="/interior-designers">Designers</a></li>
+                            <li><a href="/suppliers">Suppliers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Products
+                            <i class="arrow"></i>
+                        </a>
+                        <ul>
+                            <li><a href="/category/lighting">Lighting</a></li>
+                            <li><a href="/category/furniture">Furniture</a></li>
+                            <li><a href="/category/office-furniture">Office Furniture</a></li>
+                            <li><a href="/category/outdoor-furniture">Outdoor Furniture</a></li>
+                            <li><a href="/category/appliences">Appliances</a></li>
+                            <li><a href="/category/finishes">Finishes</a></li>
+                            <li><a href="/category/decor">Decor</a></li>
+                            <li><a href="/category/bathroom">Bathroom</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/design-talk">Design Talk</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="#">Account <i class="arrow"></i></a>
+                        <ul>
+                            <li><a href="/login">Sign In</a></li>
+                            <li><a href="/sign-up">Sign Up</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="chat-section">
+            <div class="container-lg container-fluid py-lg-5">
+                <div class="row justify-content-lg-around">
+                    <div class="rounded bg-white col-lg-4 h-fit-content">
+                        <div class="d-block d-lg-none">
+                            <div class="p-3">
+                                <div class="d-inline-block mx-1">
+                                    <img src="svg/inbox.svg" height="24" width="24" class="align-baseline">
+                                </div>
+
+                                <h3 class="d-inline-block m-0">Inbox</h3>
+                            </div>
+                            <hr class="my-1 mx-4">
+                        </div>
+                        <div class="chat-person">
+                            <div class="container-fluid py-3">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="img/krishh.jpg" height="62" width="62" class="rounded-circle">
+                                    </div>
+
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="text-truncate">
+                                                <strong>Selena Stevens</strong>
+                                                <div class="rounded-circle chat-indicator chat-indicator-online"></div>
+                                            </div>
+                                            <div class="text-truncate text-muted">Hello Selena, I went through your
+                                                profile and I was really </div>
+                                            <div class="text-muted">06.25 AM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-1 mx-4">
+                        <div class="chat-person">
+                            <div class="container-fluid py-3">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="img/krishh.jpg" height="62" width="62" class="rounded-circle">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="text-truncate">
+                                                <strong>Selena Stevens</strong>
+                                                <div class="rounded-circle chat-indicator"></div>
+                                            </div>
+                                            <div class="text-truncate text-muted">Hello Selena, I went through your
+                                                profile and I was really </div>
+                                            <div class="text-muted">06.25 AM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-1 mx-4">
+                        <div class="chat-person">
+                            <div class="container-fluid py-3">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="img/krishh.jpg" height="62" width="62" class="rounded-circle">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="text-truncate">
+                                                <strong>Selena Stevens</strong>
+                                                <div class="rounded-circle chat-indicator chat-indicator-online"></div>
+                                            </div>
+                                            <div class="text-truncate text-muted">Hello Selena, I went through your
+                                                profile and I was really </div>
+                                            <div class="text-muted">06.25 AM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-1 mx-4">
+                        <div class="chat-person">
+                            <div class="container-fluid py-3">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="img/krishh.jpg" height="62" width="62" class="rounded-circle">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="text-truncate">
+                                                <strong>Selena Stevens</strong>
+                                                <div class="rounded-circle chat-indicator"></div>
+                                            </div>
+                                            <div class="text-truncate text-muted">Hello Selena, I went through your
+                                                profile and I was really </div>
+                                            <div class="text-muted">06.25 AM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-1 mx-4">
+                        <div class="chat-person">
+                            <div class="container-fluid py-3">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="img/krishh.jpg" height="62" width="62" class="rounded-circle">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="text-truncate">
+                                                <strong>Selena Stevens</strong>
+                                                <div class="rounded-circle chat-indicator chat-indicator-online"></div>
+                                            </div>
+                                            <div class="text-truncate text-muted">Hello Selena, I went through your
+                                                profile and I was really </div>
+                                            <div class="text-muted">06.25 AM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded bg-white p-0 col-lg-7 d-none d-lg-block h-fit-content">
+                        <div class="container-fluid p-0">
+                            <div class="row shadow-sm no-gutters p-3">
+                                <div class="col-1">
+                                    <img src="img/ramiz.jpg" height="62" width="62" class="rounded-circle">
+                                </div>
+                                <h5 class="col font-weight-bold align-self-center m-0 pl-3">
+                                    Selena Stevens
+                                </h5>
+                            </div>
+
+                            <div class="row no-gutters p-3">
+                                <div class="w-100">
+                                    <div class="d-inline-flex flex-row-reverse align-items-end">
+                                        <div class="text-muted">Me</div>
+                                        <div class="position-relative mw-75 mx-2">
+                                            <div class="message-outgoing-text rounded-left rounded-top p-2">
+                                                Hello Selena, I went through your profile and I was really Impressed by
+                                                your work. are you available now?
+                                            </div>
+                                            <div class="text-muted position-absolute">06:55 pm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters p-3">
+                                <div class="w-100">
+                                    <div class="d-inline-flex align-items-end">
+                                        <div class="text-muted">Selena</div>
+                                        <div class="position-relative mw-75 mx-2">
+                                            <div class="message-incoming-text rounded-right rounded-top p-2">
+                                                Hello Selena, I went through your profile and I was really
+                                            </div>
+                                            <div class="text-muted position-absolute right-0">06:55 pm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters p-3">
+                                <div class="w-100">
+                                    <div class="d-inline-flex flex-row-reverse align-items-end">
+                                        <div class="text-muted">Me</div>
+                                        <div class="position-relative mw-75 mx-2">
+                                            <div class="message-outgoing-text rounded-left rounded-top p-2">
+                                                Hello Selena, I went through your profile and I was really Impressed by
+                                                your work. are you available now?
+                                            </div>
+                                            <div class="text-muted position-absolute">06:55 pm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters p-3">
+                                <div class="w-100">
+                                    <div class="d-inline-flex align-items-end">
+                                        <div class="text-muted">Selena</div>
+                                        <div class="position-relative mw-75 mx-2">
+                                            <div class="message-incoming-text rounded-right rounded-top p-2">
+                                                Hello Selena, I went through your profile and I was really
+                                            </div>
+                                            <div class="text-muted position-absolute right-0">06:55 pm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters p-3">
+                                <div class="w-100">
+                                    <div class="d-inline-flex flex-row-reverse align-items-end">
+                                        <div class="text-muted">Me</div>
+                                        <div class="position-relative mw-75 mx-2">
+                                            <div class="message-outgoing-text rounded-left rounded-top p-2">
+                                                Hello Selena, I went through your profile and I was really Impressed by
+                                                your work. are you available now?
+                                            </div>
+                                            <div class="text-muted position-absolute">06:55 pm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters p-3">
+                                <div class="w-100">
+                                    <div class="d-inline-flex align-items-end">
+                                        <div class="text-muted">Selena</div>
+                                        <div class="position-relative mw-75 mx-2">
+                                            <div class="message-incoming-text rounded-right rounded-top p-2">
+                                                Hello Selena, I went through your profile and I was really
+                                            </div>
+                                            <div class="text-muted position-absolute right-0">06:55 pm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row no-gutters">
+                            <div class="input-group m-3">
+                                <input type="text" class="form-control" placeholder="Type a message"
+                                    aria-label="Type a message" aria-describedby="button-send">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-send">
+                                        <img src="svg/send_message.svg">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row footer-columns">
+                <div>
+                    <p class="footer-esorus-title">esorus</p>
+                    <p class="light-text">Your FF&amp;E Personal Assistant</p>
+                    <ul class="list-inline mt-3">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/Esorus" target="_blank"><i
+                                    class="fa fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/_esorus" target="_blank"><i
+                                    class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer-title">Quick Links</p>
+                    <ul class="footer-menu">
+                        <li class="list-inline-item"><a href="/interior-designers">Designers</a></li>
+                        <li class="list-inline-item"><a href="/suppliers">Suppliers</a></li>
+                        <li class="list-inline-item"><a href="/#aboutUs">About Esorus</a></li>
+                        <li class="list-inline-item"><a href="/design-to-go">Design.To.Go</a></li>
+                        <li class="list-inline-item"><a href="/design-to-go/beirut-initiative">Baity Beirut</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer-title">Curious and intrigued? Let's Talk!</p>
+                    <ul class="footer-menu">
+                        <li class="list-inline-item">
+                            <i class="fa fa-map-marker"></i>
+                            AUC, New Cairo, Egypt
+                        </li>
+                        <li class="list-inline-item">
+                            <i class="fa fa-phone"></i>
+                            +201025035347
+                        </li>
+                        <li class="list-inline-item">
+                            <i class="fa fa-envelope"></i>
+                            admin@esorus.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center copyright order-4">
+                    All rights reserved. Esorus - Interior Sourcing Made Easy - Interior Sourcing Made Easy © 2020
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
+        integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
+        crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

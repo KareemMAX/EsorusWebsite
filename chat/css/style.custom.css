@@ -1,0 +1,39 @@
+.chat-section{
+    background-color: #F7F7F7;
+}
+
+.chat-indicator{
+    height: 10px;
+    width: 10px;
+    background-color: #CFCFCF;
+    display: inline-block;
+}
+
+.chat-indicator-online{
+    background-color: #8DC640;
+}
+
+.h-fit-content{
+    height: fit-content !important;
+}
+
+.w-fit-content{
+    width: fit-content !important;
+}
+
+.mw-75{
+    max-width: 75%;
+}
+
+.message-outgoing-text{
+    background-color: #F2F2F2;
+}
+
+.message-incoming-text{
+    background-color: #FFFFFF;
+    border: 1px solid #CFCFCF;
+}
+
+.right-0{
+    right: 0px;
+}
