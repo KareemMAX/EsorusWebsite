@@ -9,7 +9,7 @@
     display: inline-block;
 }
 
-.chat-indicator-online{
+.chat-indicator.active{
     background-color: #8DC640;
 }
 
