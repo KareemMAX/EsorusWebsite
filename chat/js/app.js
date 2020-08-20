@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    // Scroll to the bottom of chat-history-viewport
+    $('.chat-history-viewport')[0].scrollTop = $('.chat-history-viewport')[0].scrollHeight;
+    
     changeHeaderStyle();
 
     // Side wrapper event listeners

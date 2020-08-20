@@ -63,6 +63,18 @@
     background-image: url(../svg/send-message.svg);
 }
 
+.chat-history-viewport{
+    height: calc(100vh - 300px);
+    overflow-y: auto;
+}
+
+@media (min-width: 992px){
+    .chat-list{
+        height: calc(100vh - 140px);
+        overflow-y: auto;
+    }
+}
+
 @media (max-width: 992px){
     .chat-history.mobile-active{
         display: block !important;
@@ -70,5 +82,9 @@
 
     .chat-list.mobile-active, header.mobile-active{
         display: none !important;
+    }
+
+    .chat-history-viewport{
+        height: calc(100vh - 176px);
     }
 }
