@@ -37,3 +37,17 @@
 .right-0{
     right: 0px;
 }
+
+.chat-list{
+    cursor: pointer;
+}
+
+@media (max-width: 992px){
+    .chat-history.mobile-active{
+        display: block !important;
+    }
+
+    .chat-list.mobile-active, header.mobile-active{
+        display: none !important;
+    }
+}

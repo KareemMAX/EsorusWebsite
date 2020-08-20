@@ -14,6 +14,21 @@ $(document).ready(function() {
         $(this).find("i").toggleClass('rotate-minus-180');
         $(this).parent().find("ul").toggleClass('open');
     });
+
+    // Mobile chat event listeners
+    $('.chat-person').click(function() {
+        if ($(window).width() < 992) {
+            $('.chat-history').toggleClass('mobile-active')
+            $('.chat-list').toggleClass('mobile-active')
+            $('header').toggleClass('mobile-active')
+        }
+    });
+
+    $('.close-chat-btn').click(function() {
+        $('.chat-history').toggleClass('mobile-active')
+        $('.chat-list').toggleClass('mobile-active')
+        $('header').toggleClass('mobile-active')
+    });
 });
 
 $(window).resize(function(){
