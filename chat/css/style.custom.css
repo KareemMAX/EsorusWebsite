@@ -2,6 +2,18 @@
     background-color: #F7F7F7;
 }
 
+.chat-person{
+    margin: 0px 10px;
+}
+
+.chat-person + .chat-person{
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.chat-message.outging{
+    flex-direction: row-reverse;
+}
+
 .chat-indicator{
     height: 10px;
     width: 10px;
@@ -25,16 +37,18 @@
     max-width: 75%;
 }
 
-.message-outgoing-text{
+.chat-message.outging .chat-message-text{
     background-color: #F2F2F2;
+    border-radius: .25rem .25rem 0rem .25rem;
 }
 
-.message-incoming-text{
+.chat-message.incoming .chat-message-text{
     background-color: #FFFFFF;
     border: 1px solid #CFCFCF;
+    border-radius: .25rem .25rem .25rem 0rem;
 }
 
-.right-0{
+.chat-message.incoming .chat-time{
     right: 0px;
 }
 
