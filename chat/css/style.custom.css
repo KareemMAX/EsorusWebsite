@@ -42,6 +42,13 @@
     cursor: pointer;
 }
 
+.send-icon{
+    display: inline-block;
+    width: 23px;
+    height: 18px;
+    background-image: url(../svg/send-message.svg);
+}
+
 @media (max-width: 992px){
     .chat-history.mobile-active{
         display: block !important;
